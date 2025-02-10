@@ -8,6 +8,7 @@
 #守护线程的设置：setDaemon(True)
 # 守护线程的设置必须在start()之前
 #守护线程 能与join()方法一起使用？--能
+# 守护线程的作用：最典型的应用就是 GC 垃圾回收线程
 
 import threading
 from time import sleep
@@ -30,8 +31,6 @@ if __name__ == '__main__':
     t1 = MyThread('t1')
     t2 = MyThread('t2')
     #设置守护线程
-    # t1.setDaemon(True)
-    # t2.setDaemon(True)
     t1.daemon = True
     t2.daemon = True
     #启动线程

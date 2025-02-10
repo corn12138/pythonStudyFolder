@@ -43,13 +43,13 @@ if __name__ == '__main__':
     #创建线程
     t1 = MyThread('t1')
     t2 = MyThread('t2')
-    #
+    # 设置守护线程
     t1.daemon = True
     t2.daemon = True
     #启动线程
     t1.start()
     t2.start()
-    #
+    # 等待主线程结束
     # t1.join()
     # t2.join()
     print('主线程,end')

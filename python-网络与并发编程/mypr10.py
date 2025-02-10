@@ -10,7 +10,7 @@ from time import sleep
 def fun1():
     lock1.acquire()
     print("线程1占用资源1")
-    sleep(2)
+    sleep(1)
     lock2.acquire()
     print("线程1占用资源2")
 
@@ -22,7 +22,7 @@ def fun1():
 def fun2():
     lock2.acquire()
     print("线程2占用资源2")
-    sleep(2)
+    sleep(1)
     lock1.acquire()
     print("线程2占用资源1")
 

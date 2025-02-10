@@ -8,23 +8,21 @@
 import threading
 from time import sleep
 
-
-def func1(name):
-    print(f"线程{name},start") #f - format
-    for i in range(5):
-        print(f"线程{name},i={i}")
+def fun1(name):
+    print(f"线程{name},start")
+    for i in range(3):
+        print(f"线程:{name},{i}")
         sleep(3)
     print(f"线程{name},end")
 
-
-
-
 if __name__ == '__main__':
-    print('主线程,start')
+    #方法包装创建线程
+    print("主线程。start")
     #创建线程
-    t1 = threading.Thread(target=func1,args=('t1',)) #语法：threading.Thread(target=函数名,args=(参数1,参数2,...))
-    t2 = threading.Thread(target=func1,args=('t2',))
+    t1 = threading.Thread(target=fun1,args=("t1",))
+    t2 = threading.Thread(target=fun1,args=("t2",))
     #启动线程
     t1.start()
     t2.start()
-    print('主线程,end')
+    print('主线程。end')
+

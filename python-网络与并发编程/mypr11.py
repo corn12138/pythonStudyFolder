@@ -31,4 +31,6 @@ if __name__ == '__main__':
     for i in range(7):
         t = Thread(target=home,args=(f"小明{i}",se))
         t.start()
+        # join()方法：等待线程结束,等待线程结束后才会继续执行
+        # t.join()
 
