@@ -29,9 +29,10 @@ if __name__ == '__main__':
     t.__next__()
     t.__next__()
     t.__next__()
-    t.__next__()
-    try:
-        t.__next__()
-    except StopIteration as e:
-        print(e.value)
+    # t.__next__()
+    # try:
+    #     t.__next__()
+    #
+    # except StopIteration as e:
+    #     print(e.value)
 
